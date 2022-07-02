@@ -13,7 +13,7 @@ int main(void)
         int duct = 0;
         int j = 0;
 
-	for (d = 1; d < 120; d++)
+	for (d = 1; d < 90; d++)
 	{
                 counter += 1;
                 if (counter == 10)
