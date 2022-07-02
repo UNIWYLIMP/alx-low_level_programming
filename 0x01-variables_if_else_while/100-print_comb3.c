@@ -9,11 +9,25 @@
 int main(void)
 {
 	int d;
+        int counter = 1;
+        int duct = 0;
 
-	for (d = 0; d < 90; d++)
+	for (d = 1; d < 90; d++)
 	{
-		putchar((d / 10) + '0');
-		putchar((d % 10) + '0');
+                counter += 1;
+                if (counter == 10)
+                {
+                        counter = 0;
+                        duct += 1;
+                }
+
+                int v = (d / 10);
+                int j = (d % 10);
+                if (j > duct)
+                {
+		        putchar((d / 10) + '0');
+		        putchar((d % 10) + '0');
+                }
 		if (d != 89)
 		{
 			putchar(',');
