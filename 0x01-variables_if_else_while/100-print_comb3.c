@@ -21,7 +21,6 @@ int main(void)
                         duct += 1;
                 }
 
-                int v = (d / 10);
                 int j = (d % 10);
                 if (j > duct)
                 {
