@@ -25,6 +25,7 @@ int main(void)
                 j = (d % 10);
                 if (j > duct)
                 {
+                        putchar((d);
 		        putchar((d / 10) + '0');
 		        putchar((d % 10) + '0');
                         if (d != 89)
