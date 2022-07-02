@@ -22,7 +22,7 @@ int main(void)
                         duct += 1;
                 }
 
-                j = (d % 10);
+                j += (d % 10);
                 if (1 == 1)
                 {
 		        putchar((d) + (d / 10) + '0');
