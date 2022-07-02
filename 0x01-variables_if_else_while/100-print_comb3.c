@@ -23,7 +23,7 @@ int main(void)
                 }
 
                 j = (d % 10);
-                if (True)
+                if (1 == 1)
                 {
 		        putchar((d) + (d / 10) + '0');
 		        putchar((d % 10) + '0');
