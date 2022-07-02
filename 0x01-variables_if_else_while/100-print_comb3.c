@@ -1,40 +1,37 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+ *main - prints numbers from 00 to 89
+ *Return: 0 if (successful)
+*/
+
 int main(void)
 {
-	int d;
-        int counter = 1;
-        int duct = 0;
-        int j = 0;
+	int i, j;
 
-	for (d = 1; d < 90; d++)
+	i = 48;
+	j = 48;
+
+	while (i < 58)
 	{
-                counter += 1;
-                if (counter == 10)
-                {
-                        counter = 0;
-                        duct += 1;
-                }
-                
-                j += (d % 10);
-                if (j > duct)
-                {
-		        putchar((d / 10) + '0');
-		        putchar((d % 10) + '0');
+		j = i + 1;
+		while (j < 58)
+		{
+			putchar(i);
+			putchar(j);
 
-                        if (d != 89)
-		        {
-			        putchar(',');
-			        putchar(' ');
-		        }
-                }
+			if (i < 56 || j < 57)
+			{
+				putchar(44);
+				putchar(32);
+			}
+			j++;
+		}
+
+		i++;
 	}
-putchar('\n');
-return (0);
+
+	putchar(10);
+
+	return (0);
 }
