@@ -11,6 +11,7 @@ int main(void)
 	int d;
         int counter = 1;
         int duct = 0;
+        int j = 0;
 
 	for (d = 1; d < 90; d++)
 	{
@@ -21,7 +22,7 @@ int main(void)
                         duct += 1;
                 }
 
-                int j = (d % 10);
+                j = (d % 10);
                 if (j > duct)
                 {
 		        putchar((d / 10) + '0');
