@@ -21,7 +21,7 @@ int main(void)
                         counter = 0;
                         duct += 1;
                 }
-                putchar((d) + (d / 10) + '0');
+                putchar((d / 10) + '0');
 		putchar((d % 10) + '0');
                 j += (d % 10);
                 if (1 == 1)
