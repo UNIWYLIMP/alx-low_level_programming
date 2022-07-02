@@ -23,7 +23,7 @@ int main(void)
                 }
                 
                 j += (d % 10);
-                if (d > duct)
+                if (j > duct)
                 {
 		        putchar((d / 10) + '0');
 		        putchar((d % 10) + '0');
