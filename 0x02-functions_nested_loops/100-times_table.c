@@ -28,7 +28,7 @@ void print_times_table(int n)
 			d = (rone * cone);
                         if ((d / 100) > 0)
 			{
-				_putchar((d / 10) + '00');
+				_putchar((d / 10) + '0' + '0');
 			}
 
 			else if ((d / 10) > 0)
