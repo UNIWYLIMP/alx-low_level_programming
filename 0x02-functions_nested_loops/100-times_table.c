@@ -24,7 +24,6 @@ void print_times_table(int n)
 		_putchar(' '); }
 		for (cone = 1; cone <= n; cone++)
 		{
-                        _putchar(' ');
 			d = (rone * cone);
 
 			if ((d / 10) > 0 && d < 100)
@@ -47,6 +46,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
+                                _putchar(' ');
 			}
 		}
 		_putchar('\n');
