@@ -20,7 +20,7 @@ void print_times_table(int n)
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
-		for (cone = 1; cone <= 9; cone++)
+		for (cone = 1; cone <= 3; cone++)
 		{
 			d = (rone * cone);
 			if ((d / 10) > 0)
