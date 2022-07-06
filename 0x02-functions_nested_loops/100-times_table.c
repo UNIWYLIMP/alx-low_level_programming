@@ -34,6 +34,7 @@ void print_times_table(int n)
 			}
                         else if ((d / 10) > 0 && d >= 100)
                         { 
+                                _putchar(' ');
                                 _putchar((d / 100) + '0');
                                 _putchar(((d % 100) / 10) + '0');
                         }
@@ -47,11 +48,8 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-                        if (d <= 99)        
+                        if (d < 99)        
                                 {_putchar(' '); }
-                        if (d <= 9)
-                                {_putchar(' '); }
-			}
 		}
 		_putchar('\n');
 	}
