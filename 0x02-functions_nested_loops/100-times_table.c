@@ -50,10 +50,11 @@ void print_times_table(int n)
 				_putchar(' ');
                         if (d < 99)        
                                 {_putchar(' '); }
+                        }
 		}
 		_putchar('\n');
         }
 
         return;
-}
+
 }
