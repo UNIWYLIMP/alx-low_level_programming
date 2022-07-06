@@ -33,7 +33,7 @@ void print_times_table(int n)
 			}
 			_putchar((d % 10) + '0');
 
-			if (cone < (n-1))
+			if (cone < n)
 			{
 				_putchar(',');
 				_putchar(' ');
