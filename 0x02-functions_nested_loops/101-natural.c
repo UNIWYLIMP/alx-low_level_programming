@@ -12,12 +12,13 @@ int main(void)
         int lobal = 0;
         while (super < 1024)
         {
-         if ((super%3) == 0 || (super%5) == 0)
-         {
-                 lobal += super;
-         }
+                 if ((super%3) == 0 || (super%5) == 0)
+                 {
+                         lobal += super;
+                 }
          super++;
         }
-        printf("%d", lobal, "\n");
+        printf("%d", lobal);
+        printf("\n");
 	return (0);
 }
