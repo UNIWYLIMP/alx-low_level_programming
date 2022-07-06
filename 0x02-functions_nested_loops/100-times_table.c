@@ -47,11 +47,11 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-                        if (d < 100)        
-                                {_putchar(' ');
-                        if (d < 10)
+                        if (d <= 99)        
                                 {_putchar(' '); }
-			} }
+                        if (d <= 9)
+                                {_putchar(' '); }
+			}
 		}
 		_putchar('\n');
 	}
