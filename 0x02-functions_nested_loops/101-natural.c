@@ -18,6 +18,6 @@ int main(void)
          }
          super++;
         }
-        printf(lobal);
+        printf("%d", lobal);
 	return (0);
 }
