@@ -33,8 +33,8 @@ void print_times_table(int n)
 			{
 				_putchar(' ');
 			}
-                        _putchar(' ');
 			_putchar((d % 10) + '0');
+                        _putchar(' ');
    
 			if (cone < n)
 			{
