@@ -13,7 +13,7 @@ int lobal = 0;
 while (super < 1024)
 {
 if ((super % 3) == 0 || (super % 5) == 0)
-    lobal += super;
+     lobal += super;
 super++; }
 printf("%d", lobal);
 printf("\n");
