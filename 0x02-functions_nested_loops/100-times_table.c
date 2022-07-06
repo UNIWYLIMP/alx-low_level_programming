@@ -1,5 +1,4 @@
 #include "main.h"
-#include<stdio.h>
 /**
  * times_table -  a function that prints the 9 times table, starting with 0
  * rone = row, cone = column, d = digits of current result
@@ -28,11 +27,15 @@ void print_times_table(int n)
                         _putchar(' ');
 			d = (rone * cone);
 
-			if ((d / 10) > 0)
+			if ((d / 10) > 0 && d < 100)
 			{
-                                printf(d, "\n")
 				_putchar((d / 10) + '0');
 			}
+                        if ((d / 10) > 0 && d > 100)
+                        { 
+                                _putchar((d / 100) + '0');
+                                _putchar(((d % 100) / 10) + '0');
+                        }
 			else
 			{
 				_putchar(' ');
