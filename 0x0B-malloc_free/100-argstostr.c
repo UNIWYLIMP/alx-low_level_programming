@@ -1,86 +1,50 @@
+/*
+ * File: 100-argstostr.c
+ * Auth: Aderibigbe Ayomide
+ */
+
+#include "main.h"
 #include <stdlib.h>
 
 /**
- * strtow - char
- * @str: pointer to string params
- * Return: char
+ * argstostr - Concatenates all arguments of the program into a string;
+ *             arguments are separated by a new line in the string.
+ * @ac: The number of arguments passed to the program.
+ * @av: An array of pointers to the arguments.
+ *
+ * Return: If ac == 0, av == NULL, or the function fails - NULL.
+ *         Otherwise - a pointer to the new string.
  */
-
-char **strtow(char *str)
+char *argstostr(int ac, char **av)
 {
-	int i = 0, j = 0, k = 0;
-	int len = 0, count = 0;
-	char **f, *col;
+	char *str;
+	int arg, byte, index, size = ac;
 
-	if (!str || !*str)
-	{
+	if (ac == 0 || av == NULL)
 		return (NULL);
+
+	for (arg = 0; arg < ac; arg++)
+	{
+		for (byte = 0; av[arg][byte]; byte++)
+			size++;
 	}
 
-	while (*(str + i))
-	{
-		if (*(str + i) != ' ')
-		{
-			if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
-			{
-				count += 1;
-			}
-		}
-		i++;
-	}
+	str = malloc(sizeof(char) * size + 1);
 
-	if (count == 0)
-	{
+	if (str == NULL)
 		return (NULL);
-	}
-	count += 1;
-	f = malloc(sizeof(char *) * count);
 
-	if (!f)
+	index = 0;
+
+	for (arg = 0; arg < ac; arg++)
 	{
-		return (NULL);
+		for (byte = 0; av[arg][byte]; byte++)
+			str[index++] = av[arg][byte];
+
+		str[index++] = '\n';
 	}
-	i = 0;
 
-	while (*str)
-	{
-		while (*str == ' ' && *str)
-		{
-			str++;
-		}
-		len = 0;
+	str[size] = '\0';
 
-		while (*(str + len) != ' ' && *(str + len))
-		{
-			len += 1;
-		}
-		len += 1;
-		col = malloc(sizeof(char) * len);
-
-		if (!col)
-		{
-			for (k = j - 1; k >= 0; k--)
-			{
-				free(f[k]);
-			}
-			free(f);
-			return (NULL);
-		}
-
-		for (k = 0; k < (len - 1);  k++)
-		{
-			*(col + k) = *(str++);
-		}
-		*(col + k) = '\0';
-		*(f + j) = col;
-
-		if (j < (count - 1))
-		{
-			j++;
-		}
-	}
-	*(f + j) = NULL;
-	return (f);
-} /*yes*/
-
-
+	return (str);
+}
