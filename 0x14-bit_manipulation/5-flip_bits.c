@@ -1,9 +1,6 @@
-/*
- * File: 5-flip_bits.c
- * Auth: Brennan D Baraban
- */
 
-#include "holberton.h"
+
+#include "main.h"
 
 /**
  * flip_bits - Counts the number of bits needed to be
