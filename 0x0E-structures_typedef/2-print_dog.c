@@ -1,6 +1,5 @@
 /*
  * File: 2-print_dog.c
- * Auth: Brennan D Baraban
  */
 
 #include "dog.h"
