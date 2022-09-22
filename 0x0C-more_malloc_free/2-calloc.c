@@ -1,7 +1,3 @@
-/*
- * File: 2-calloc.c
- * Auth: Brennan D Baraban
- */
 
 #include "main.h"
 #include <stdlib.h>
